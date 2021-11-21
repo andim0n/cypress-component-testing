@@ -1,6 +1,17 @@
 {
+  "baseUrl": "https://jsonplaceholder.cypress.io",
   "component": {
     "testFiles": "**/*.test.{js,ts,jsx,tsx}",
     "componentFolder": "test"
-  }
+  },
+  "projectId": "tcpi48",
+  "env": {
+    "foo": "bar",
+    "BASE_DOMAIN": "https://google.com"
+  },
+  "viewportHeight": 1000,
+  "viewportWidth": 1280,
+  "defaultCommandTimeout": 4000,
+  "pageLoadTimeout": 60000,
+  "ignoreTestFiles": "*.WIP.spec.js"
 }
