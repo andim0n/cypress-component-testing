@@ -1,5 +1,4 @@
 {
-  "baseUrl": "https://jsonplaceholder.cypress.io",
   "component": {
     "testFiles": "**/*.test.{js,ts,jsx,tsx}",
     "componentFolder": "test"

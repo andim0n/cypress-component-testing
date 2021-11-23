@@ -23,23 +23,3 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
-const loginPage = require('../pages/login')
-
-Cypress.Commands.add('login', (username, password) => {
-  cy.visit(loginPage.url)
-  cy.get(loginPage.input.name).type(username)
-  cy.get(loginPage.input.password).type(password)
-  cy.get(loginPage.button.submit).click()
-  cy.contains(loginPage.message)
-  cy.get(loginPage.button.logout).should('be.visible')
-})
-
-Cypress.Commands.add('getSessionStorage', key => {
-  cy.window().then(window => window.sessionStorage.getItem(key))
-})
-
-Cypress.Commands.add('setSessionStorage', (key, value) => {
-  cy.window().then(window => {
-    window.sessionStorage.setItem(key, value)
-  })
-})

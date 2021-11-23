@@ -1,7 +1,7 @@
 describe('cy.clock()', () => {
   it('Control timer', () => {
-    cy.clock().pause()
-    cy.visit('index.html')
+    cy.clock()
+    cy.visit('clock.html').pause()
     cy.tick(260000)
   })
 })
